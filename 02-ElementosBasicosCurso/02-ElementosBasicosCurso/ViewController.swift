@@ -9,11 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var bemVindoView: UIView!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        bemVindoView.backgroundColor = UIColor.brown;
     }
 
 
+    @IBAction func loginButton(_ sender: Any) {
+        bemVindoView.backgroundColor = UIColor.green
+    }
 }
 

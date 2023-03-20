@@ -50,9 +50,12 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <color key="tintColor" red="0.088073903420000002" green="0.10953742650000001" blue="0.28155202959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="Login">
                                     <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IfO-6H-MXQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -72,6 +75,12 @@
                             <constraint firstItem="ROf-3L-mtE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yqi-cy-ofi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bemVindoView" destination="Rwd-d4-zYq" id="JpT-bb-bxa"/>
+                        <outlet property="loginButton" destination="swa-R1-bjq" id="FUf-5z-Pd2"/>
+                        <outlet property="nameTextField" destination="ZaE-sk-Wbw" id="jZS-un-7cI"/>
+                        <outlet property="passwordTextField" destination="ROf-3L-mtE" id="47x-qo-Wyw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
