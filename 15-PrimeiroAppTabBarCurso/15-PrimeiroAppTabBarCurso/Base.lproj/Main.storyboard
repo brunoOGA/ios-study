@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3x5-Se-PaD">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tela 02-->
+        <scene sceneID="x0W-0i-Woc">
+            <objects>
+                <viewController id="RB0-Da-m4h" customClass="Tela02" customModule="_5_PrimeiroAppTabBarCurso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3RF-Xi-nHt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lwu-ue-fDK"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tela 02" image="paperplane" catalog="system" id="8kp-kF-jaQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeG-qk-sC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="262"/>
+        </scene>
+        <!--Tela 01-->
+        <scene sceneID="Fx6-GF-cc2">
+            <objects>
+                <viewController id="k1t-e4-ZCN" customClass="Tela01" customModule="_5_PrimeiroAppTabBarCurso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eNp-VN-Vga">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3r2-1K-orp"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tela 01" image="doc.text.fill" catalog="system" id="sfX-fJ-YrR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Baz-Ar-rVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="-345"/>
+        </scene>
+        <!--Tela 03-->
+        <scene sceneID="DNS-yE-l5U">
+            <objects>
+                <viewController id="mQT-oa-LWs" customClass="Tela03" customModule="_5_PrimeiroAppTabBarCurso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fX-4S-rol">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="G7x-od-uiu"/>
+                        <color key="backgroundColor" red="1" green="0.19829302155273032" blue="0.12771142646060385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tela 03" image="link" catalog="system" id="GTb-rK-hLM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ift-kW-ciA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208" y="-85"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8FZ-pi-zKf">
+            <objects>
+                <tabBarController id="3x5-Se-PaD" customClass="TabBarController" customModule="_5_PrimeiroAppTabBarCurso" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZJ4-11-BKB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="k1t-e4-ZCN" kind="relationship" relationship="viewControllers" id="O8g-zb-c6J"/>
+                        <segue destination="RB0-Da-m4h" kind="relationship" relationship="viewControllers" id="0s4-um-8fi"/>
+                        <segue destination="mQT-oa-LWs" kind="relationship" relationship="viewControllers" id="wKd-vu-EHt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4z9-P0-ceG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="-42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="link" catalog="system" width="128" height="124"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
