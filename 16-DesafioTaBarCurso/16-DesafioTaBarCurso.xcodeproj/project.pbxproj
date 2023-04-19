@@ -18,6 +18,8 @@
 		AD125F6B29EE8F3500BDCA6D /* Tela03VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD125F6A29EE8F3500BDCA6D /* Tela03VC.swift */; };
 		AD125F6F29EE957D00BDCA6D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD125F6D29EE957D00BDCA6D /* CustomTableViewCell.swift */; };
 		AD125F7029EE957D00BDCA6D /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD125F6E29EE957D00BDCA6D /* CustomTableViewCell.xib */; };
+		AD165CCA29EFE07D005906AA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD165CC929EFE07D005906AA /* Profile.swift */; };
+		AD165CCD29EFE83E005906AA /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD165CCC29EFE83E005906AA /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		AD125F6A29EE8F3500BDCA6D /* Tela03VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03VC.swift; sourceTree = "<group>"; };
 		AD125F6D29EE957D00BDCA6D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		AD125F6E29EE957D00BDCA6D /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		AD165CC929EFE07D005906AA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		AD165CCC29EFE83E005906AA /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +70,19 @@
 		AD125F5129EE8C2100BDCA6D /* 16-DesafioTaBarCurso */ = {
 			isa = PBXGroup;
 			children = (
+				AD165CCB29EFE814005906AA /* AlertController */,
+				AD165CC829EFE05F005906AA /* Model */,
 				AD125F6C29EE956200BDCA6D /* Cell */,
 				AD125F5229EE8C2100BDCA6D /* AppDelegate.swift */,
 				AD125F5429EE8C2100BDCA6D /* SceneDelegate.swift */,
-				AD125F5629EE8C2100BDCA6D /* Tela01VC.swift */,
 				AD125F5829EE8C2100BDCA6D /* Main.storyboard */,
 				AD125F5B29EE8C2200BDCA6D /* Assets.xcassets */,
 				AD125F5D29EE8C2200BDCA6D /* LaunchScreen.storyboard */,
-				AD125F6029EE8C2200BDCA6D /* Info.plist */,
 				AD125F6629EE8D5500BDCA6D /* TabBarViewController.swift */,
+				AD125F5629EE8C2100BDCA6D /* Tela01VC.swift */,
 				AD125F6829EE8F2400BDCA6D /* Tela02VC.swift */,
 				AD125F6A29EE8F3500BDCA6D /* Tela03VC.swift */,
+				AD125F6029EE8C2200BDCA6D /* Info.plist */,
 			);
 			path = "16-DesafioTaBarCurso";
 			sourceTree = "<group>";
@@ -88,6 +94,22 @@
 				AD125F6E29EE957D00BDCA6D /* CustomTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		AD165CC829EFE05F005906AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD165CC929EFE07D005906AA /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD165CCB29EFE814005906AA /* AlertController */ = {
+			isa = PBXGroup;
+			children = (
+				AD165CCC29EFE83E005906AA /* AlertController.swift */,
+			);
+			path = AlertController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD125F6729EE8D5500BDCA6D /* TabBarViewController.swift in Sources */,
+				AD165CCD29EFE83E005906AA /* AlertController.swift in Sources */,
+				AD165CCA29EFE07D005906AA /* Profile.swift in Sources */,
 				AD125F5729EE8C2100BDCA6D /* Tela01VC.swift in Sources */,
 				AD125F6929EE8F2400BDCA6D /* Tela02VC.swift in Sources */,
 				AD125F6F29EE957D00BDCA6D /* CustomTableViewCell.swift in Sources */,

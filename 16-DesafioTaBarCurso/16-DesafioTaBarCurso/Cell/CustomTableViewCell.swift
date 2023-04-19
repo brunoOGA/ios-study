@@ -21,14 +21,15 @@ class CustomTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        userImageView.image = UIImage(systemName: "person")
-        nameUserLabel.text = "Bruno A"
+        selectionStyle = .none
+        userImageView.clipsToBounds = true
+        userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        userImageView.contentMode = .scaleAspectFill
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    public func setupCell(profile: Profile) {
+        userImageView.image = profile.photo
+        nameUserLabel.text = profile.name
     }
     
 }
