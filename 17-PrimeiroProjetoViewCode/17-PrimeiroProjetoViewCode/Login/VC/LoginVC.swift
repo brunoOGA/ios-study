@@ -28,7 +28,11 @@ class LoginVC: UIViewController {
 extension LoginVC: LoginScreenProtocol {
     
     func tappedLoginButton() {
-        print("chamou")
+        let vc: HomeVC = HomeVC()
+        
+    //    present(vc, animated: true) // Modal
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
