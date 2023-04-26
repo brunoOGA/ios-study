@@ -46,6 +46,128 @@ class LoginScreen: UIView {
         return label
     }()
     
+    lazy var loginTextField: UITextField = {
+        let tf = UITextField()
+        
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0)
+        tf.borderStyle = .roundedRect
+        tf.keyboardType = .emailAddress
+        tf.attributedPlaceholder = NSAttributedString(string: "Login", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
+        tf.textColor = .white
+        tf.clipsToBounds = true
+        tf.layer.cornerRadius = 12
+        tf.layer.borderWidth = 1.0
+        tf.layer.borderColor = UIColor.white.cgColor
+        
+        return tf
+    }()
+    
+    lazy var passwordTextField: UITextField = {
+        let tf = UITextField()
+        
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0)
+        tf.borderStyle = .roundedRect
+        tf.isSecureTextEntry = true
+        tf.attributedPlaceholder = NSAttributedString(string: "Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
+        tf.textColor = .white
+        tf.clipsToBounds = true
+        tf.layer.cornerRadius = 12
+        tf.layer.borderWidth = 1.0
+        tf.layer.borderColor = UIColor.white.cgColor
+        
+        return tf
+    }()
+    
+    lazy var recoverPasswordButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Recuperar senha?", for: .normal)
+        button.setTitleColor(UIColor(red: 231/255, green: 48/255, blue: 214/255, alpha: 1.0), for: .normal)
+        button.addTarget(self, action: #selector(tappedReceverPasswordButton), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    lazy var subLoginImageView: UIImageView = {
+        let image = UIImageView()
+        
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Gradient")
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 8
+        image.contentMode = .scaleToFill
+        
+        return image
+    }()
+    
+    lazy var loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Entrar", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.titleLabel?.textAlignment = .center
+        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    lazy var lineView: UIView = {
+        let view = UIView()
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        
+        return view
+    }()
+    
+    lazy var signInMetamaskView: UIView = {
+        let view = UIView()
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
+        view.layer.borderColor = UIColor(red: 207/255, green: 0/255, blue: 192/255, alpha: 1.0).cgColor
+        view.layer.borderWidth = 2
+        
+        return view
+    }()
+    
+    lazy var signInMetamaskImageView: UIImageView = {
+        let image = UIImageView()
+        
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Logo")
+        
+        return image
+    }()
+    
+    lazy var signInMetamaskLabel: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.text = "Entrar com a Metamask"
+        
+        return label
+    }()
+    
+    @objc func tappedReceverPasswordButton(_ sender: UIButton) {
+        print(#function)
+    }
+    
+    @objc func tappedLoginButton(_ sender: UIButton) {
+        print(#function)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
@@ -61,6 +183,15 @@ class LoginScreen: UIView {
         addSubview(logoAppImageView)
         addSubview(loginLabel)
         addSubview(descriptionLabel)
+        addSubview(loginTextField)
+        addSubview(passwordTextField)
+        addSubview(recoverPasswordButton)
+        addSubview(subLoginImageView)
+        addSubview(loginButton)
+        addSubview(lineView)
+        addSubview(signInMetamaskView)
+        signInMetamaskView.addSubview(signInMetamaskImageView)
+        signInMetamaskView.addSubview(signInMetamaskLabel)
     }
 
     private func configConstraints() {
@@ -80,7 +211,49 @@ class LoginScreen: UIView {
             
             descriptionLabel.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 4),
             descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            
+            loginTextField.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 12),
+            loginTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            loginTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            loginTextField.heightAnchor.constraint(equalToConstant: 40),
+            
+            passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 12),
+            passwordTextField.leadingAnchor.constraint(equalTo: loginTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 40),
+            
+            recoverPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 8),
+            recoverPasswordButton.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            recoverPasswordButton.heightAnchor.constraint(equalToConstant: 16),
+        
+            subLoginImageView.topAnchor.constraint(equalTo: recoverPasswordButton.bottomAnchor, constant: 36),
+            subLoginImageView.leadingAnchor.constraint(equalTo: loginTextField.leadingAnchor),
+            subLoginImageView.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            subLoginImageView.heightAnchor.constraint(equalToConstant: 42),
+            
+            loginButton.topAnchor.constraint(equalTo: subLoginImageView.topAnchor),
+            loginButton.leadingAnchor.constraint(equalTo: subLoginImageView.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: subLoginImageView.trailingAnchor),
+            loginButton.bottomAnchor.constraint(equalTo: subLoginImageView.bottomAnchor),
+            
+            lineView.topAnchor.constraint(equalTo: subLoginImageView.bottomAnchor, constant: 48),
+            lineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 64),
+            lineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -64),
+            lineView.heightAnchor.constraint(equalToConstant: 0.5),
+            
+            signInMetamaskView.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 48),
+            signInMetamaskView.leadingAnchor.constraint(equalTo: subLoginImageView.leadingAnchor),
+            signInMetamaskView.trailingAnchor.constraint(equalTo: subLoginImageView.trailingAnchor),
+            signInMetamaskView.heightAnchor.constraint(equalToConstant: 42),
+            
+            signInMetamaskImageView.leadingAnchor.constraint(equalTo: signInMetamaskView.leadingAnchor, constant: 52),
+            signInMetamaskImageView.centerYAnchor.constraint(equalTo: signInMetamaskView.centerYAnchor),
+            signInMetamaskImageView.heightAnchor.constraint(equalToConstant: 20),
+            signInMetamaskImageView.widthAnchor.constraint(equalToConstant: 20),
+            
+            signInMetamaskLabel.leadingAnchor.constraint(equalTo: signInMetamaskImageView.trailingAnchor, constant: 16),
+            signInMetamaskLabel.centerYAnchor.constraint(equalTo: signInMetamaskView.centerYAnchor)
         ])
     }
 }
