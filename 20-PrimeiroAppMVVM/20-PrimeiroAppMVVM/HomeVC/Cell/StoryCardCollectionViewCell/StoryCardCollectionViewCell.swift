@@ -13,9 +13,12 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
     
     private var screen: StoryCardCollectionViewCellScreen = StoryCardCollectionViewCellScreen()
     
+    private var viewModel: StoryCardViewModel?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configScreen()
+        screen.configProtocolsCollectionView(delegate: self, dataSource: self)
     }
     
     required init?(coder: NSCoder) {
@@ -25,5 +28,26 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
     private func configScreen() {
         contentView.addSubview(screen)
         screen.pin(to: contentView)
+    }
+    
+    public func setupCell(listStory: [Stories]) {
+        viewModel = StoryCardViewModel(listStory: listStory)
+    }
+}
+
+extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel?.numberOfItems ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let viewModel = viewModel else { return UICollectionViewCell() }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell
+        cell?.setupCell(data: viewModel.loadCurrentStory(indexPath: indexPath), indexPath: indexPath)
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 120)
     }
 }
