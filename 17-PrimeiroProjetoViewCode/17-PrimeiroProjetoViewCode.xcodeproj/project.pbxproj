@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		ADB1748229F1341E0063941E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1748129F1341E0063941E /* AppDelegate.swift */; };
 		ADB1748429F1341E0063941E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1748329F1341E0063941E /* SceneDelegate.swift */; };
-		ADB1748629F1341E0063941E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1748529F1341E0063941E /* LoginVC.swift */; };
 		ADB1748B29F1341E0063941E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB1748A29F1341E0063941E /* Assets.xcassets */; };
 		ADB1748E29F1341E0063941E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB1748C29F1341E0063941E /* LaunchScreen.storyboard */; };
-		ADB1749929F138630063941E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB1749829F138630063941E /* LoginScreen.swift */; };
+		ADD1BEA92A13C21800253F3C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1BEA82A13C21800253F3C /* LoginVC.swift */; };
+		ADD1BEAB2A13C22600253F3C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1BEAA2A13C22600253F3C /* LoginScreen.swift */; };
 		ADE2F94529F7CAAA0076ED74 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2F94429F7CAAA0076ED74 /* HomeVC.swift */; };
+		D83D95FCEBB360855F013CF1 /* Pods_17_PrimeiroProjetoViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB43603F180797CACFB5781E /* Pods_17_PrimeiroProjetoViewCode.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78ECD8C24367260BA6C2C3B4 /* Pods-17-PrimeiroProjetoViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-17-PrimeiroProjetoViewCode.release.xcconfig"; path = "Target Support Files/Pods-17-PrimeiroProjetoViewCode/Pods-17-PrimeiroProjetoViewCode.release.xcconfig"; sourceTree = "<group>"; };
 		ADB1747E29F1341E0063941E /* 17-PrimeiroProjetoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "17-PrimeiroProjetoViewCode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB1748129F1341E0063941E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB1748329F1341E0063941E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADB1748529F1341E0063941E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		ADB1748A29F1341E0063941E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB1748D29F1341E0063941E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB1748F29F1341E0063941E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADB1749829F138630063941E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		ADD1BEA82A13C21800253F3C /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		ADD1BEAA2A13C22600253F3C /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		ADE2F94429F7CAAA0076ED74 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EB43603F180797CACFB5781E /* Pods_17_PrimeiroProjetoViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_17_PrimeiroProjetoViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8991EC2006F9F94A5DB665E /* Pods-17-PrimeiroProjetoViewCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-17-PrimeiroProjetoViewCode.debug.xcconfig"; path = "Target Support Files/Pods-17-PrimeiroProjetoViewCode/Pods-17-PrimeiroProjetoViewCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83D95FCEBB360855F013CF1 /* Pods_17_PrimeiroProjetoViewCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FE21CA7520BBD43023DB76C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8991EC2006F9F94A5DB665E /* Pods-17-PrimeiroProjetoViewCode.debug.xcconfig */,
+				78ECD8C24367260BA6C2C3B4 /* Pods-17-PrimeiroProjetoViewCode.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ADB1747529F1341E0063941E = {
 			isa = PBXGroup;
 			children = (
 				ADB1748029F1341E0063941E /* 17-PrimeiroProjetoViewCode */,
 				ADB1747F29F1341E0063941E /* Products */,
+				7FE21CA7520BBD43023DB76C /* Pods */,
+				B4452F8EBB0112A10F6E6641 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +97,7 @@
 		ADB1749629F137FD0063941E /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				ADB1748529F1341E0063941E /* LoginVC.swift */,
+				ADD1BEA82A13C21800253F3C /* LoginVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -89,7 +105,7 @@
 		ADB1749729F1380A0063941E /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				ADB1749829F138630063941E /* LoginScreen.swift */,
+				ADD1BEAA2A13C22600253F3C /* LoginScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -110,6 +126,14 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		B4452F8EBB0112A10F6E6641 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB43603F180797CACFB5781E /* Pods_17_PrimeiroProjetoViewCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADB1749229F1341E0063941E /* Build configuration list for PBXNativeTarget "17-PrimeiroProjetoViewCode" */;
 			buildPhases = (
+				9E10AFEF6409442DE688AF2F /* [CP] Check Pods Manifest.lock */,
 				ADB1747A29F1341E0063941E /* Sources */,
 				ADB1747B29F1341E0063941E /* Frameworks */,
 				ADB1747C29F1341E0063941E /* Resources */,
+				5B724D664E9CDA3B4503C4E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,16 +201,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B724D664E9CDA3B4503C4E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-17-PrimeiroProjetoViewCode/Pods-17-PrimeiroProjetoViewCode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-17-PrimeiroProjetoViewCode/Pods-17-PrimeiroProjetoViewCode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-17-PrimeiroProjetoViewCode/Pods-17-PrimeiroProjetoViewCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E10AFEF6409442DE688AF2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-17-PrimeiroProjetoViewCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADB1747A29F1341E0063941E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB1748629F1341E0063941E /* LoginVC.swift in Sources */,
-				ADB1749929F138630063941E /* LoginScreen.swift in Sources */,
 				ADE2F94529F7CAAA0076ED74 /* HomeVC.swift in Sources */,
 				ADB1748229F1341E0063941E /* AppDelegate.swift in Sources */,
+				ADD1BEA92A13C21800253F3C /* LoginVC.swift in Sources */,
 				ADB1748429F1341E0063941E /* SceneDelegate.swift in Sources */,
+				ADD1BEAB2A13C22600253F3C /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +386,7 @@
 		};
 		ADB1749329F1341E0063941E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8991EC2006F9F94A5DB665E /* Pods-17-PrimeiroProjetoViewCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -345,6 +414,7 @@
 		};
 		ADB1749429F1341E0063941E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78ECD8C24367260BA6C2C3B4 /* Pods-17-PrimeiroProjetoViewCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

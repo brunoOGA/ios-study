@@ -1,0 +1,6 @@
+framework module Pods_17_PrimeiroProjetoViewCode {
+  umbrella header "Pods-17-PrimeiroProjetoViewCode-umbrella.h"
+
+  export *
+  module * { export * }
+}

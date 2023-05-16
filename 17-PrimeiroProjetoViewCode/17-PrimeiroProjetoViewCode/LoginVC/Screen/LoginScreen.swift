@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
+    func tappedRegisterButton()
 }
 
 class LoginScreen: UIView {
@@ -79,6 +80,23 @@ class LoginScreen: UIView {
         delegate?.tappedLoginButton()
     }
     
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+    
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Não tem conta? Cadastre-se", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        button.backgroundColor = .clear
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    @objc func tappedRegisterButton(_ sender: UIButton) {
+        delegate?.tappedRegisterButton()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -95,6 +113,7 @@ class LoginScreen: UIView {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(loginButton)
+        addSubview(registerButton)
     }
     
     private func configConstraints() {
@@ -116,6 +135,11 @@ class LoginScreen: UIView {
             loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
+            registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
         ])
     }
     
