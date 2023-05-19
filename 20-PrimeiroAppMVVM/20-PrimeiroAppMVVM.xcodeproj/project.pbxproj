@@ -38,9 +38,14 @@
 		ADFF81F52A13FB5300BDEB06 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD95FE432A13F8BE00EE4B5C /* LoginScreen.swift */; };
 		ADFF81F62A13FB5800BDEB06 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD95FE412A13F8BE00EE4B5C /* LoginVC.swift */; };
 		ADFF81F72A13FB5B00BDEB06 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD95FE3F2A13F8BE00EE4B5C /* LoginViewModel.swift */; };
+		ADFF81FB2A143D7000BDEB06 /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = ADFF81FA2A143D7000BDEB06 /* HomeData.json */; };
+		ADFF81FE2A143E4300BDEB06 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF81FD2A143E4300BDEB06 /* HomeService.swift */; };
+		ADFF82002A14410A00BDEB06 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF81FF2A14410A00BDEB06 /* HomeData.swift */; };
+		FEBCD771656571E3784F59A8 /* Pods_20_PrimeiroAppMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3DD0A29560079EAC026E47 /* Pods_20_PrimeiroAppMVVM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CFF13E16EDCDDB0A5340738 /* Pods-20-PrimeiroAppMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20-PrimeiroAppMVVM.debug.xcconfig"; path = "Target Support Files/Pods-20-PrimeiroAppMVVM/Pods-20-PrimeiroAppMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0DEF882A08EB8600822A0B /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD0DEF8B2A08EBB000822A0B /* PostCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		AD72367D2A13CB8900B1B5DC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -72,6 +77,11 @@
 		ADF955D22A025B7800114C24 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		ADF955D72A025E7200114C24 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		ADF955DA2A025F2600114C24 /* StoryCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		ADFF81FA2A143D7000BDEB06 /* HomeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
+		ADFF81FD2A143E4300BDEB06 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		ADFF81FF2A14410A00BDEB06 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		DA3DD0A29560079EAC026E47 /* Pods_20_PrimeiroAppMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_20_PrimeiroAppMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6732B99F951D7EFCE08D37 /* Pods-20-PrimeiroAppMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20-PrimeiroAppMVVM.release.xcconfig"; path = "Target Support Files/Pods-20-PrimeiroAppMVVM/Pods-20-PrimeiroAppMVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +91,31 @@
 			files = (
 				ADD1BE9F2A13BFEA00253F3C /* FirebaseAuth in Frameworks */,
 				ADD1BEA12A13BFEA00253F3C /* FirebaseCrashlytics in Frameworks */,
+				FEBCD771656571E3784F59A8 /* Pods_20_PrimeiroAppMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2F76218E5B3B9A5C9381F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CFF13E16EDCDDB0A5340738 /* Pods-20-PrimeiroAppMVVM.debug.xcconfig */,
+				FC6732B99F951D7EFCE08D37 /* Pods-20-PrimeiroAppMVVM.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		59693F03243B9210B1A67D99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DD0A29560079EAC026E47 /* Pods_20_PrimeiroAppMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD0DEF872A08EB5600822A0B /* PostCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +215,8 @@
 			children = (
 				ADE19F202A0103A000E8852F /* 20-PrimeiroAppMVVM */,
 				ADE19F1F2A0103A000E8852F /* Products */,
+				4E2F76218E5B3B9A5C9381F1 /* Pods */,
+				59693F03243B9210B1A67D99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +231,8 @@
 		ADE19F202A0103A000E8852F /* 20-PrimeiroAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF81FC2A143E2200BDEB06 /* Service */,
+				ADFF81F92A143D4B00BDEB06 /* Mock */,
 				AD72367C2A13CB6300B1B5DC /* Alert */,
 				ADF955D12A025B6800114C24 /* Model */,
 				ADE19F382A0109DD00E8852F /* Extension */,
@@ -320,6 +353,7 @@
 			children = (
 				ADF955D22A025B7800114C24 /* Stories.swift */,
 				ADF35C572A04FBD5000C4C28 /* Posts.swift */,
+				ADFF81FF2A14410A00BDEB06 /* HomeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,6 +391,22 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		ADFF81F92A143D4B00BDEB06 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF81FA2A143D7000BDEB06 /* HomeData.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		ADFF81FC2A143E2200BDEB06 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF81FD2A143E4300BDEB06 /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,9 +414,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADE19F322A0103A100E8852F /* Build configuration list for PBXNativeTarget "20-PrimeiroAppMVVM" */;
 			buildPhases = (
+				0C9ED2AEA373FD96C12A1179 /* [CP] Check Pods Manifest.lock */,
 				ADE19F1A2A0103A000E8852F /* Sources */,
 				ADE19F1B2A0103A000E8852F /* Frameworks */,
 				ADE19F1C2A0103A000E8852F /* Resources */,
+				ADFF81F82A143ABF00BDEB06 /* ShellScript */,
+				85CCC2019868CBE127C4B328 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -422,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFF81FB2A143D7000BDEB06 /* HomeData.json in Resources */,
 				ADE19F2E2A0103A100E8852F /* LaunchScreen.storyboard in Resources */,
 				ADE19F2B2A0103A100E8852F /* Assets.xcassets in Resources */,
 				ADD1BE9C2A13BF6100253F3C /* GoogleService-Info.plist in Resources */,
@@ -429,6 +483,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C9ED2AEA373FD96C12A1179 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-20-PrimeiroAppMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85CCC2019868CBE127C4B328 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-20-PrimeiroAppMVVM/Pods-20-PrimeiroAppMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-20-PrimeiroAppMVVM/Pods-20-PrimeiroAppMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-20-PrimeiroAppMVVM/Pods-20-PrimeiroAppMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADFF81F82A143ABF00BDEB06 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADE19F1A2A0103A000E8852F /* Sources */ = {
@@ -439,6 +554,7 @@
 				AD0DEF8C2A08EBB000822A0B /* PostCollectionViewCellScreen.swift in Sources */,
 				ADF955DB2A025F2600114C24 /* StoryCollectionViewCellScreen.swift in Sources */,
 				AD72367E2A13CB8900B1B5DC /* Alert.swift in Sources */,
+				ADFF82002A14410A00BDEB06 /* HomeData.swift in Sources */,
 				ADF35C532A04F95D000C4C28 /* PostCardCollectionViewCell.swift in Sources */,
 				ADFF81F52A13FB5300BDEB06 /* LoginScreen.swift in Sources */,
 				ADE19F262A0103A000E8852F /* HomeVC.swift in Sources */,
@@ -459,6 +575,7 @@
 				ADE19F3C2A010B3E00E8852F /* UIColor + Extension.swift in Sources */,
 				ADE19F3A2A0109FE00E8852F /* UIView + Extension.swift in Sources */,
 				ADE19F242A0103A000E8852F /* SceneDelegate.swift in Sources */,
+				ADFF81FE2A143E4300BDEB06 /* HomeService.swift in Sources */,
 				ADE19F452A010F1100E8852F /* StoryCardCollectionViewCellScreen.swift in Sources */,
 				ADF35C582A04FBD5000C4C28 /* Posts.swift in Sources */,
 			);
@@ -511,7 +628,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -594,11 +711,13 @@
 		};
 		ADE19F332A0103A100E8852F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CFF13E16EDCDDB0A5340738 /* Pods-20-PrimeiroAppMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "20-PrimeiroAppMVVM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -620,6 +739,7 @@
 		};
 		ADE19F342A0103A100E8852F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC6732B99F951D7EFCE08D37 /* Pods-20-PrimeiroAppMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

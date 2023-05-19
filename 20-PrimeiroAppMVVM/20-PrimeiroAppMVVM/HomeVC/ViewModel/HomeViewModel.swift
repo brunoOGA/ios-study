@@ -7,24 +7,24 @@
 
 import UIKit
 
+protocol HomeViewModelProtocol: AnyObject {
+    func success()
+    func error()
+}
+
 class HomeViewModel {
     
-    private var posts = [
-        Posts(profileImage: "img4", userName: "Samuel", postImage: "post1"),
-        Posts(profileImage: "img5", userName: "Ariana", postImage: "post2"),
-        Posts(profileImage: "img6", userName: "Bruno", postImage: "post3"),
-        Posts(profileImage: "img7", userName: "Pedro", postImage: "post4"),
-    ]
+    private var service: HomeService = HomeService()
     
-    private var story = [
-        Stories(image: "img1", userName: "Add Story"),
-        Stories(image: "img2", userName: "Jack"),
-        Stories(image: "img3", userName: "Carolina"),
-        Stories(image: "img4", userName: "Samuel"),
-        Stories(image: "img5", userName: "Ariana"),
-        Stories(image: "img6", userName: "Bruno"),
-        Stories(image: "img7", userName: "Pedro"),
-    ]
+    private var posts = [Posts]()
+    
+    private var story = [Stories]()
+    
+    private weak var delegate: HomeViewModelProtocol?
+    
+    public func delegate(delegate: HomeViewModelProtocol?) {
+        self.delegate = delegate
+    }
     
     public var getListStory: [Stories] {
         story
@@ -44,5 +44,17 @@ class HomeViewModel {
         }
         
         return CGSize(width: frame.width - 120, height: frame.height)
+    }
+    
+    public func fetchAllRequest() {
+        service.getHomeDataURLSession { homeData, error in
+            if error == nil {
+                self.posts = homeData?.posts ?? []
+                self.story = homeData?.stories ?? []
+                self.delegate?.success()
+            } else {
+                self.delegate?.error()
+            }
+        }
     }
 }
