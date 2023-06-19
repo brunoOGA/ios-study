@@ -1,0 +1,6 @@
+framework module Pods_18_AppBackFront {
+  umbrella header "Pods-18-AppBackFront-umbrella.h"
+
+  export *
+  module * { export * }
+}
