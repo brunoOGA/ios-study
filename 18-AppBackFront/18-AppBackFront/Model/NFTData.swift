@@ -9,9 +9,9 @@ import Foundation
 
 // MARK: - NFTData
 struct NFTData: Codable {
-    let logoImage: LogoImage?
-    let filterListNft: [FilterNft]?
-    let nftList: [Nft]?
+    var logoImage: LogoImage?
+    var filterListNft: [FilterNft]?
+    var nftList: [Nft]?
 
     enum CodingKeys: String, CodingKey {
         case logoImage = "logo_image"
@@ -22,9 +22,9 @@ struct NFTData: Codable {
 
 // MARK: - FilterNft
 struct FilterNft: Codable {
-    let title: String?
-    let id: Int?
-    let isSelected: Bool?
+    var title: String?
+    var id: Int?
+    var isSelected: Bool?
 }
 
 // MARK: - LogoImage
@@ -34,17 +34,17 @@ struct LogoImage: Codable {
 
 // MARK: - Nft
 struct Nft: Codable {
-    let ownedBy: String?
-    let price: String?
-    let type: Int?
-    let nftImage: String?
-    let userName: String?
-    let userImage: String?
-    let nftPrice: Double?
-    let nftID: Int?
-    let nftNameImage, nftDescription: String?
-    let titleLatestDeals: String?
-    let latestDeals: [LatestDeal]?
+    var ownedBy: String?
+    var price: String?
+    var type: Int?
+    var nftImage: String?
+    var userName: String?
+    var userImage: String?
+    var nftPrice: Double?
+    var nftID: Int?
+    var nftNameImage, nftDescription: String?
+    var titleLatestDeals: String?
+    var latestDeals: [LatestDeal]?
 
     enum CodingKeys: String, CodingKey {
         case ownedBy = "owned_by"
@@ -63,10 +63,10 @@ struct Nft: Codable {
 
 // MARK: - LatestDeal
 struct LatestDeal: Codable {
-    let userName: String?
-    let userImage: String?
-    let nftPrice: Double?
-    let lastAccess: String?
+    var userName: String?
+    var userImage: String?
+    var nftPrice: Double?
+    var lastAccess: String?
 
     enum CodingKeys: String, CodingKey {
         case userName = "user_name"

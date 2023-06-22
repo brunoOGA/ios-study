@@ -47,7 +47,7 @@ class HomeScreen: UIView {
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        collectionView.backgroundColor =  UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         collectionView.register(NftFilterCollectionViewCell.self, forCellWithReuseIdentifier: NftFilterCollectionViewCell.identifier)
         
         let layout = UICollectionViewFlowLayout()
@@ -65,11 +65,10 @@ class HomeScreen: UIView {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(NftTableViewCell.self, forCellReuseIdentifier: NftTableViewCell.identifier)
         tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         tableView.separatorStyle = .none
-        
         return tableView
     }()
     
@@ -78,11 +77,12 @@ class HomeScreen: UIView {
         tableView.dataSource = dataSource
     }
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         addViews()
-        configContraints()
+        configConstraints()
     }
     
     func addViews() {
@@ -97,14 +97,14 @@ class HomeScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configContraints() {
+    func configConstraints() {
         NSLayoutConstraint.activate([
             viewBackground.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
             viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
-            viewBackground.heightAnchor.constraint(equalToConstant: 200),
+            viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
+            viewBackground.heightAnchor.constraint(equalToConstant: 160),
             
-            logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 8),
+            logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 5),
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             logoImageView.heightAnchor.constraint(equalToConstant: 40),
             logoImageView.widthAnchor.constraint(equalToConstant: 40),
@@ -114,7 +114,7 @@ class HomeScreen: UIView {
             searchBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
             searchBar.heightAnchor.constraint(equalToConstant: 46),
             
-            collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
+            collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 15),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: viewBackground.bottomAnchor),
@@ -122,8 +122,8 @@ class HomeScreen: UIView {
             tableView.topAnchor.constraint(equalTo: viewBackground.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
-    
+
 }
