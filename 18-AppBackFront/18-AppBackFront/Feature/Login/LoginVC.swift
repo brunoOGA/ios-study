@@ -54,7 +54,11 @@ extension LoginVC: LoginScreenProtocol {
     func tappedLoginButton() {
         auth?.signIn(withEmail: loginScreen?.emailTextField.text ?? "", password: loginScreen?.passwordTextField.text ?? "", completion: {user, error in if error != nil {
             self.alert?.getAlert(title: "Falha no login", message: error?.localizedDescription ?? "")
-        } else { print("Success")}})
+        } else {
+            let vc: TabBarVC = TabBarVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }})
     }
 }
             
